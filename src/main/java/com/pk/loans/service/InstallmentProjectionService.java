@@ -1,5 +1,6 @@
 package com.pk.loans.service;
 
+import com.pk.loans.model.InstallmentProjection;
 import com.pk.loans.model.LoanRequest;
 
 import java.util.List;
@@ -10,5 +11,5 @@ import java.util.List;
  * @project Loans
  */
 public interface InstallmentProjectionService {
-    List<String> calculateInstallmentProjections(LoanRequest loanRequest);
+    List<InstallmentProjection> calculateInstallmentProjections(LoanRequest loanRequest);
 }

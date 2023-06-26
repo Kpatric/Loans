@@ -1,11 +1,12 @@
 package com.pk.loans.service.serviceImpl;
 
+import com.pk.loans.model.FeeProjection;
 import com.pk.loans.model.LoanDuration;
 import com.pk.loans.model.LoanRequest;
 import com.pk.loans.service.FeeProjectionService;
-import com.pk.loans.utils.LoanUtility;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,41 +19,59 @@ import java.util.List;
 @Service
 public class FeeProjectionServiceImpl implements FeeProjectionService {
     @Override
-    public List<String> calculateFeeProjections(LoanRequest loanRequest) {
-        List<String> feeProjections = new ArrayList<>();
-        LocalDate startDate = loanRequest.getStartDate();
-        double principal = loanRequest.getAmount();
-        LocalDate currentDate = startDate;
+    public List<FeeProjection> calculateFeeProjections(LoanRequest loanApplication) {
+        List<FeeProjection> feeProjections = new ArrayList<>();
 
-        double interestRate;
-        double serviceFeeRate;
-        double maxServiceFee;
-        int numberOfWeeks = loanRequest.getDuration().getWeeks();
+        LocalDate currentDate = loanApplication.getStartDate();
+        BigDecimal principal = loanApplication.getAmount();
+        LoanDuration loanDuration = loanApplication.getLoanType();
 
-        if (loanRequest.getDuration().isWeekly()) {
-            interestRate = 0.01 * numberOfWeeks;
-            serviceFeeRate = 0.005;
-            maxServiceFee = 50;
-        } else if (loanRequest.getDuration() == LoanDuration.MONTHLY) {
-            interestRate = 0.04;
-            serviceFeeRate = 0.005;
-            maxServiceFee = 100;
-        } else {
-            throw new IllegalArgumentException("Invalid loan duration");
+        BigDecimal interestRate = getInterestRate(loanDuration);
+        BigDecimal serviceFeeCap = getServiceFeeCap(loanDuration);
+        int serviceFeeFrequency = getServiceFeeFrequency(loanDuration);
+
+        for (int i = 0; i < loanApplication.getLoanDuration(); i++) {
+            BigDecimal interestFee = calculateInterestFee(principal, interestRate);
+            feeProjections.add(new FeeProjection(currentDate, interestFee));
+
+            if (isServiceFeeApplicable(i, serviceFeeFrequency)) {
+                BigDecimal serviceFee = calculateServiceFee(principal, serviceFeeCap);
+                feeProjections.add(new FeeProjection(currentDate, serviceFee));
+            }
+
+            currentDate = currentDate.plusDays(loanDuration.getDays());
         }
-
-        while (currentDate.isBefore(LoanUtility.getEndDate(startDate, loanRequest.getDuration()))) {
-            double totalFee = LoanUtility.calculateTotalFee(principal, interestRate, serviceFeeRate, maxServiceFee, numberOfWeeks);
-            feeProjections.add(currentDate + " => " + totalFee);
-            currentDate = LoanUtility.getNextDate(currentDate, loanRequest.getDuration());
-        }
-
 
         return feeProjections;
     }
 
+    private BigDecimal getInterestRate(LoanDuration loanDuration) {
+        return (loanDuration == LoanDuration.WEEKLY) ? BigDecimal.valueOf(0.01) : BigDecimal.valueOf(0.04);
+    }
+
+    private BigDecimal getServiceFeeCap(LoanDuration loanDuration) {
+        return (loanDuration == LoanDuration.WEEKLY) ? BigDecimal.valueOf(50) : BigDecimal.valueOf(100);
+    }
+
+    private int getServiceFeeFrequency(LoanDuration loanDuration) {
+        return (loanDuration == LoanDuration.WEEKLY) ? 2 : 3;
+    }
+
+    private BigDecimal calculateInterestFee(BigDecimal principal, BigDecimal interestRate) {
+        return principal.multiply(interestRate);
+    }
+
+    private boolean isServiceFeeApplicable(int installmentIndex, int serviceFeeFrequency) {
+        return (installmentIndex + 1) % serviceFeeFrequency == 0;
+    }
+
+    private BigDecimal calculateServiceFee(BigDecimal principal, BigDecimal serviceFeeCap) {
+        BigDecimal serviceFee = principal.multiply(BigDecimal.valueOf(0.005));
+        return (serviceFee.compareTo(serviceFeeCap) > 0) ? serviceFeeCap : serviceFee;
+    }
 
 }
+
 
 
 

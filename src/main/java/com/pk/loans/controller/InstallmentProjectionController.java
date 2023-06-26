@@ -26,8 +26,8 @@ public class InstallmentProjectionController {
     }
 
     @PostMapping("/installment-projections")
-    public ResponseEntity<List<String>> calculateInstallmentProjections(@RequestBody LoanRequest loanRequest) {
-        List<String> installmentProjections = installmentProjectionService.calculateInstallmentProjections(loanRequest);
+    public ResponseEntity<String> calculateInstallmentProjections(@RequestBody LoanRequest loanRequest) {
+        String installmentProjections = installmentProjectionService.calculateInstallmentProjections(loanRequest).toString();
         return ResponseEntity.ok(installmentProjections);
     }
 }

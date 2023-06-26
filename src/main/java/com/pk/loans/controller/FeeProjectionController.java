@@ -1,5 +1,6 @@
 package com.pk.loans.controller;
 
+import com.pk.loans.model.FeeProjection;
 import com.pk.loans.model.LoanRequest;
 import com.pk.loans.service.FeeProjectionService;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.StringReader;
 import java.util.List;
 
 /**
@@ -26,8 +28,8 @@ public class FeeProjectionController {
     }
 
     @PostMapping("/fee-projections")
-    public ResponseEntity<List<String>> calculateFeeProjections(@RequestBody LoanRequest loanRequest) {
-        List<String> feeProjections = feeProjectionService.calculateFeeProjections(loanRequest);
+    public ResponseEntity<String> calculateFeeProjections(@RequestBody LoanRequest loanRequest) {
+        String feeProjections = feeProjectionService.calculateFeeProjections(loanRequest).toString();
         return ResponseEntity.ok(feeProjections);
     }
 }

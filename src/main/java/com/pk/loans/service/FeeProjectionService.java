@@ -1,5 +1,6 @@
 package com.pk.loans.service;
 
+import com.pk.loans.model.FeeProjection;
 import com.pk.loans.model.LoanRequest;
 
 import java.util.List;
@@ -10,5 +11,5 @@ import java.util.List;
  * @project Loans
  */
 public interface FeeProjectionService {
-    List<String> calculateFeeProjections(LoanRequest loanRequest);
+    List<FeeProjection> calculateFeeProjections(LoanRequest loanRequest);
 }

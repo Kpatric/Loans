@@ -5,6 +5,8 @@ import com.pk.loans.model.LoanRequest;
 import com.pk.loans.service.InstallmentProjectionService;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -19,9 +21,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class FeeProjectionServiceImplTest {
     @Test
     public void testCalculateTotalFee() {
+        BigDecimal number = new BigDecimal("1000");
         List<String> expectedFeeProjections = Arrays.asList("2023-06-01 => 10", "2023-06-08 => 20");
         FeeProjectionServiceImpl service = new FeeProjectionServiceImpl();
-        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1, LocalDate.parse("2023-06-01"), 1000);
+        LoanRequest loanRequest = new LoanRequest(1,LocalDate.parse("2023-06-01"),number,LoanDuration.WEEKLY);
         var response = service.calculateFeeProjections(loanRequest);
         assertEquals(expectedFeeProjections, response);
         System.out.println(response);
@@ -29,9 +32,10 @@ class FeeProjectionServiceImplTest {
 
     @Test
     public void testcalculateInstallmentProjections() {
+        BigDecimal number = new BigDecimal("1000");
         List<String> expectedFeeProjections = Arrays.asList("2023-06-01 => 1010.0");
         InstallmentProjectionServiceImpl service = new InstallmentProjectionServiceImpl();
-        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1, LocalDate.parse("2023-06-01"), 1000);
+        LoanRequest loanRequest = new LoanRequest(1,LocalDate.parse("2023-06-01"),number,LoanDuration.WEEKLY);
         var response = service.calculateInstallmentProjections(loanRequest);
         assertEquals(expectedFeeProjections, response);
     }

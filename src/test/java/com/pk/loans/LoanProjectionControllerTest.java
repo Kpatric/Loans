@@ -7,6 +7,8 @@ package com.pk.loans;
 
 import com.pk.loans.controller.FeeProjectionController;
 import com.pk.loans.controller.InstallmentProjectionController;
+import com.pk.loans.model.FeeProjection;
+import com.pk.loans.model.InstallmentProjection;
 import com.pk.loans.model.LoanDuration;
 import com.pk.loans.model.LoanRequest;
 import com.pk.loans.service.FeeProjectionService;
@@ -19,6 +21,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -47,41 +50,48 @@ public class LoanProjectionControllerTest {
 
     @Test
     public void testCalculateFeeProjections() {
+        BigDecimal number = new BigDecimal("1000");
         // Mocking the behavior of the feeProjectionCalculator
-        List<String> expectedFeeProjections = Arrays.asList("2023-06-01 => 10", "2023-06-08 => 20");
+        List<FeeProjection> expectedFeeProjections = List.of(
+                new FeeProjection(LocalDate.of(2023, 6, 1), BigDecimal.valueOf(30)),
+                new FeeProjection(LocalDate.of(2023, 6, 8), BigDecimal.valueOf(30)),
+                new FeeProjection(LocalDate.of(2023, 6, 8), BigDecimal.valueOf(15)),
+                new FeeProjection(LocalDate.of(2023, 6, 15), BigDecimal.valueOf(30))
+        );
         when(feeProjectionService.calculateFeeProjections(any(LoanRequest.class))).thenReturn(expectedFeeProjections);
 
         // Creating a sample LoanRequest
-        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1, LocalDate.parse("2023-06-01"), 1000);
+        LoanRequest loanRequest = new LoanRequest(1,LocalDate.parse("2023-06-01"),number,LoanDuration.WEEKLY);
 
 
         // Invoking the endpoint
-        ResponseEntity<List<String>> responseEntity = feeProjectionController.calculateFeeProjections(loanRequest);
-        List<String> actualFeeProjections = responseEntity.getBody();
+        ResponseEntity<String> responseEntity = feeProjectionController.calculateFeeProjections(loanRequest);
+        String actualFeeProjections = responseEntity.getBody();
 
         // Asserting the result
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(expectedFeeProjections, actualFeeProjections);
+        assertEquals(expectedFeeProjections.toString(), actualFeeProjections);
 
-        // Asserting the result
-        assertEquals(expectedFeeProjections, actualFeeProjections);
     }
 
     @Test
     public void testCalculateInstallmentProjections() {
-        // Mocking the behavior of the installmentProjectionCalculator
-        List<String> expectedInstallmentProjections = Arrays.asList("2023-06-01 => 1010", "2023-06-08 => 1020");
+        BigDecimal number = new BigDecimal("1000");
+        List<InstallmentProjection> expectedInstallmentProjections = List.of(
+                new InstallmentProjection(LocalDate.of(2023, 6, 1), BigDecimal.valueOf(1010))
+        );
         when(installmentProjectionService.calculateInstallmentProjections(any(LoanRequest.class))).thenReturn(expectedInstallmentProjections);
 
         // Creating a sample LoanRequest
-        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1, LocalDate.parse("2023-06-01"), 1000);
+        LoanRequest loanRequest = new LoanRequest(1,LocalDate.parse("2023-06-01"),number,LoanDuration.WEEKLY);
 
         // Invoking the endpoint
-        ResponseEntity<List<String>> responseEntity = installmentProjectionController.calculateInstallmentProjections(loanRequest);
-        List<String> actualInstallmentProjections = responseEntity.getBody();
+        ResponseEntity<String> responseEntity = installmentProjectionController.calculateInstallmentProjections(loanRequest);
+        String actualFeeProjections = responseEntity.getBody();
 
         // Asserting the result
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(expectedInstallmentProjections, actualInstallmentProjections);
+        assertEquals(expectedInstallmentProjections.toString(), actualFeeProjections);
+
     }
 }

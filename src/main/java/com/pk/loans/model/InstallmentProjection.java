@@ -1,26 +1,27 @@
 package com.pk.loans.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * @author Patrick Muriithi
- * @created 6/26/2023 - 10:58 AM
+ * @created 6/26/2023 - 8:43 PM
  * @project Loans
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class LoanRequest {
-    private int loanDuration;
-    private LocalDate startDate;
+public class InstallmentProjection {
+    private LocalDate date;
     private BigDecimal amount;
-    private LoanDuration loanType;
-}
 
+    @Override
+    public String toString() {
+        return date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + " => " + amount;
+    }
+}

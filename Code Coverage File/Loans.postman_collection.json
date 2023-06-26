@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "06528a9a-5c47-4c13-813a-4ffe3cdcf9c3",
+		"name": "Loans",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5583299"
+	},
+	"item": [
+		{
+			"name": "Fee Projection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 1000,\r\n  \"startDate\": \"2023-06-01\",\r\n  \"duration\": \"WEEKLY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fee-projections",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fee-projections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Installment Projection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 1000,\r\n  \"startDate\": \"2023-06-01\",\r\n  \"duration\": \"WEEKLY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/installment-projections",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"installment-projections"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

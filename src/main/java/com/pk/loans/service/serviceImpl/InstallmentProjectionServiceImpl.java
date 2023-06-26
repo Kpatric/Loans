@@ -1,63 +1,62 @@
 package com.pk.loans.service.serviceImpl;
 
-import com.pk.loans.model.LoanDuration;
+import com.pk.loans.model.FeeProjection;
+import com.pk.loans.model.InstallmentProjection;
 import com.pk.loans.model.LoanRequest;
+import com.pk.loans.service.FeeProjectionService;
 import com.pk.loans.service.InstallmentProjectionService;
-import com.pk.loans.utils.LoanUtility;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Patrick Muriithi
- * @created 6/26/2023 - 11:04 AM
+ * @created 6/26/2023 - 8:41 PM
  * @project Loans
  */
 @Service
 public class InstallmentProjectionServiceImpl implements InstallmentProjectionService {
+
+    @Autowired
+    private FeeProjectionService feeProjectionService;
+
     @Override
-    public List<String> calculateInstallmentProjections(LoanRequest loanRequest) {
-        List<String> installmentProjections = new ArrayList<>();
-        LocalDate startDate = loanRequest.getStartDate();
-        double principal = loanRequest.getAmount();
-        LocalDate currentDate = startDate;
+    public List<InstallmentProjection> calculateInstallmentProjections(LoanRequest loanApplication) {
+        List<InstallmentProjection> installmentProjections = new ArrayList<>();
 
-        double interestRate;
-        double serviceFeeRate;
-        double maxServiceFee;
-        int installmentCount;
-        int numberOfWeeks = loanRequest.getDuration().getWeeks();
+        LocalDate currentDate = loanApplication.getStartDate();
+        BigDecimal principal = loanApplication.getAmount();
 
-        if (loanRequest.getDuration().isWeekly()) {
-            interestRate = 0.01;
-            serviceFeeRate = 0.005;
-            maxServiceFee = 50;
-            installmentCount = numberOfWeeks; // Set installment count to 1 for weekly loans
-        } else if (loanRequest.getDuration() == LoanDuration.MONTHLY) {
-            interestRate = 0.04;
-            serviceFeeRate = 0.005;
-            maxServiceFee = 100;
-            installmentCount = 12;
-        } else {
-            throw new IllegalArgumentException("Invalid loan duration");
-        }
+        BigDecimal totalFees = calculateTotalFees(loanApplication);
 
-        while (currentDate.isBefore(LoanUtility.getEndDate(startDate, loanRequest.getDuration()))) {
-            double installmentAmount = calculateInstallmentAmount(principal, interestRate, serviceFeeRate, maxServiceFee, installmentCount);
-            installmentProjections.add(currentDate + " => " + installmentAmount);
-            currentDate = LoanUtility.getNextDate(currentDate, loanRequest.getDuration());
+        BigDecimal installmentAmount = calculateInstallmentAmount(principal, totalFees, loanApplication.getLoanDuration());
+
+        for (int i = 0; i < loanApplication.getLoanDuration(); i++) {
+            installmentProjections.add(new InstallmentProjection(currentDate, installmentAmount));
+            currentDate = currentDate.plusDays(loanApplication.getLoanType().getDays());
         }
 
         return installmentProjections;
     }
 
-
-    private double calculateInstallmentAmount(double principal, double interestRate, double serviceFeeRate, double maxServiceFee, int installmentCount) {
-        double totalFee = LoanUtility.calculateTotalFee(principal, interestRate, serviceFeeRate, maxServiceFee, installmentCount);
-        return (principal / installmentCount) + totalFee;
+    private BigDecimal calculateTotalFees(LoanRequest loanApplication) {
+        List<FeeProjection> feeProjections = feeProjectionService.calculateFeeProjections(loanApplication);
+        BigDecimal totalFees = BigDecimal.ZERO;
+        for (FeeProjection feeProjection : feeProjections) {
+            totalFees = totalFees.add(feeProjection.getAmount());
+        }
+        return totalFees;
+    }
+    private BigDecimal calculateInstallmentAmount(BigDecimal principal, BigDecimal totalFees, int loanDuration) {
+        BigDecimal totalAmount = principal.add(totalFees);
+        BigDecimal installmentAmount = totalAmount.divide(BigDecimal.valueOf(loanDuration), 2, RoundingMode.HALF_UP);
+        return installmentAmount;
     }
 
-}
 
+}
