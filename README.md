@@ -9,3 +9,4 @@ A global custom exception hundler is included.
 
 A documentation using Swagger is included. Can be accessed through localhost:8080/swagger-ui/index.html
 
+Open the code on your favourite IDE.IntelliJ...click run and test out the enpoints. 
