@@ -36,32 +36,16 @@ public class LoanUtility {
         }
     }
 
-
-    public double calculateServiceFee(double principal, double serviceFeeRate, double maxServiceFee) {
-        return (principal * serviceFeeRate) > maxServiceFee ? maxServiceFee : (principal * serviceFeeRate);
-    }
-
-    public double calculateTotalFee(double principal, double interestRate, double serviceFeeRate, double maxServiceFee,int noOfweeks) {
+    public double calculateTotalFee(double principal, double interestRate, double serviceFeeRate, double maxServiceFee, int durationWeeks) {
         double interest = principal * interestRate;
         double serviceFee = 0.0;
 
-        if (noOfweeks % 2 == 0) {
+        if (durationWeeks % 2 == 0) {
             serviceFee = Math.min((principal * serviceFeeRate), maxServiceFee);
         }
 
         return interest + serviceFee;
     }
-    public double calculateTotalInstallment(double principal, double interestRate, double serviceFeeRate, double maxServiceFee, int installmentCount) {
-        double interest = principal * interestRate;
-        double serviceFee = 0.0;
-
-        if (installmentCount % 2 == 0) {
-            serviceFee = Math.min((principal * serviceFeeRate), maxServiceFee);
-        }
-
-        return interest + serviceFee;
-    }
-
 
 
 }

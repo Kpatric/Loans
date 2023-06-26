@@ -4,6 +4,7 @@ package com.pk.loans;
  * @created 6/26/2023 - 11:34 AM
  * @project Loans
  */
+
 import com.pk.loans.controller.FeeProjectionController;
 import com.pk.loans.controller.InstallmentProjectionController;
 import com.pk.loans.model.LoanDuration;
@@ -38,6 +39,7 @@ public class LoanProjectionControllerTest {
 
     @InjectMocks
     private InstallmentProjectionController installmentProjectionController;
+
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
@@ -50,7 +52,7 @@ public class LoanProjectionControllerTest {
         when(feeProjectionService.calculateFeeProjections(any(LoanRequest.class))).thenReturn(expectedFeeProjections);
 
         // Creating a sample LoanRequest
-        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1,LocalDate.parse("2023-06-01"),1000);
+        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1, LocalDate.parse("2023-06-01"), 1000);
 
 
         // Invoking the endpoint
@@ -72,7 +74,7 @@ public class LoanProjectionControllerTest {
         when(installmentProjectionService.calculateInstallmentProjections(any(LoanRequest.class))).thenReturn(expectedInstallmentProjections);
 
         // Creating a sample LoanRequest
-        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1,LocalDate.parse("2023-06-01"),1000);
+        LoanRequest loanRequest = new LoanRequest(LoanDuration.WEEKLY_1, LocalDate.parse("2023-06-01"), 1000);
 
         // Invoking the endpoint
         ResponseEntity<List<String>> responseEntity = installmentProjectionController.calculateInstallmentProjections(loanRequest);

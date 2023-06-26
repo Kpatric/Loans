@@ -18,6 +18,7 @@ class LoanUtilityTest {
     @Test
     void getEndDate() {
     }
+
     @Test
     public void testGetEndDateDuration() {
         LocalDate startDate = LocalDate.of(2023, 6, 1);

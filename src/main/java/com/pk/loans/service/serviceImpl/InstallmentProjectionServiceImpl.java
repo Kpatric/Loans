@@ -55,7 +55,7 @@ public class InstallmentProjectionServiceImpl implements InstallmentProjectionSe
 
 
     private double calculateInstallmentAmount(double principal, double interestRate, double serviceFeeRate, double maxServiceFee, int installmentCount) {
-        double totalFee = LoanUtility.calculateTotalInstallment(principal, interestRate, serviceFeeRate, maxServiceFee, installmentCount);
+        double totalFee = LoanUtility.calculateTotalFee(principal, interestRate, serviceFeeRate, maxServiceFee, installmentCount);
         return (principal / installmentCount) + totalFee;
     }
 
