@@ -28,12 +28,13 @@ public class InstallmentProjectionServiceImpl implements InstallmentProjectionSe
         double serviceFeeRate;
         double maxServiceFee;
         int installmentCount;
+        int numberOfWeeks = loanRequest.getDuration().getWeeks();
 
-        if (loanRequest.getDuration() == LoanDuration.WEEKLY) {
+        if (loanRequest.getDuration().isWeekly()) {
             interestRate = 0.01;
             serviceFeeRate = 0.005;
             maxServiceFee = 50;
-            installmentCount = 4;
+            installmentCount = numberOfWeeks; // Set installment count to 1 for weekly loans
         } else if (loanRequest.getDuration() == LoanDuration.MONTHLY) {
             interestRate = 0.04;
             serviceFeeRate = 0.005;
@@ -51,9 +52,12 @@ public class InstallmentProjectionServiceImpl implements InstallmentProjectionSe
 
         return installmentProjections;
     }
+
+
     private double calculateInstallmentAmount(double principal, double interestRate, double serviceFeeRate, double maxServiceFee, int installmentCount) {
-        double totalFee = LoanUtility.calculateTotalFee(principal, interestRate, serviceFeeRate, maxServiceFee);
+        double totalFee = LoanUtility.calculateTotalInstallment(principal, interestRate, serviceFeeRate, maxServiceFee, installmentCount);
         return (principal / installmentCount) + totalFee;
     }
+
 }
 

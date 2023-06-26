@@ -20,16 +20,17 @@ public class FeeProjectionServiceImpl implements FeeProjectionService {
     @Override
     public List<String> calculateFeeProjections(LoanRequest loanRequest) {
         List<String> feeProjections = new ArrayList<>();
-        LocalDate startDate =loanRequest.getStartDate();
+        LocalDate startDate = loanRequest.getStartDate();
         double principal = loanRequest.getAmount();
         LocalDate currentDate = startDate;
 
         double interestRate;
         double serviceFeeRate;
         double maxServiceFee;
+        int numberOfWeeks = loanRequest.getDuration().getWeeks();
 
-        if (loanRequest.getDuration() == LoanDuration.WEEKLY) {
-            interestRate = 0.01;
+        if (loanRequest.getDuration().isWeekly()) {
+            interestRate = 0.01 * numberOfWeeks;
             serviceFeeRate = 0.005;
             maxServiceFee = 50;
         } else if (loanRequest.getDuration() == LoanDuration.MONTHLY) {
@@ -41,7 +42,7 @@ public class FeeProjectionServiceImpl implements FeeProjectionService {
         }
 
         while (currentDate.isBefore(LoanUtility.getEndDate(startDate, loanRequest.getDuration()))) {
-            double totalFee = LoanUtility.calculateTotalFee(principal, interestRate, serviceFeeRate, maxServiceFee);
+            double totalFee = LoanUtility.calculateTotalFee(principal, interestRate, serviceFeeRate, maxServiceFee, numberOfWeeks);
             feeProjections.add(currentDate + " => " + totalFee);
             currentDate = LoanUtility.getNextDate(currentDate, loanRequest.getDuration());
         }
