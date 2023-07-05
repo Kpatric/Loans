@@ -179,3 +179,15 @@
 2023-07-05 19:56:14,273 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 3944 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
 2023-07-05 19:56:14,279 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
 2023-07-05 19:56:18,991 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.587 seconds (process running for 8.599)
+2023-07-05 19:58:30,203 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 12372 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:58:30,209 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:58:34,557 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.257 seconds (process running for 7.611)
+2023-07-05 19:58:30,203 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 12372 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:58:30,209 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:58:34,557 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.257 seconds (process running for 7.611)
+2023-07-05 20:12:08,628 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 11180 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 20:12:08,637 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 20:12:17,485 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 11.987 seconds (process running for 18.935)
+2023-07-05 20:13:39,552 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 20544 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 20:13:39,558 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 20:13:44,191 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.508 seconds (process running for 10.226)
