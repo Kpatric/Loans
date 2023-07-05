@@ -4,6 +4,9 @@ import com.pk.loans.model.FeeProjection;
 import com.pk.loans.model.LoanDuration;
 import com.pk.loans.model.LoanRequest;
 import com.pk.loans.service.FeeProjectionService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -18,8 +21,25 @@ import java.util.List;
  */
 @Service
 public class FeeProjectionServiceImpl implements FeeProjectionService {
+    private static final Logger logger = LoggerFactory.getLogger(FeeProjectionServiceImpl.class);
+    @Value("${interestWeekly}")
+    public String interestWeekly;
+
+    @Value("${interestMonthly}")
+    public String interestMonthly;
+
+    @Value("${serviceCapMonthly}")
+    public String serviceCapMonthly;
+
+    @Value("${serviceCapWeekly}")
+    public String serviceCapWeekly;
+
+    @Value("${serviceFee}")
+    public String serviceFees;
+
     @Override
     public List<FeeProjection> calculateFeeProjections(LoanRequest loanApplication) {
+
         List<FeeProjection> feeProjections = new ArrayList<>();
 
         LocalDate currentDate = loanApplication.getStartDate();
@@ -46,18 +66,28 @@ public class FeeProjectionServiceImpl implements FeeProjectionService {
     }
 
     private BigDecimal getInterestRate(LoanDuration loanDuration) {
-        return (loanDuration == LoanDuration.WEEKLY) ? BigDecimal.valueOf(0.01) : BigDecimal.valueOf(0.04);
+        try {
+            return (loanDuration == LoanDuration.WEEKLY) ? new BigDecimal(interestWeekly) : new BigDecimal(interestMonthly);
+        } catch (NumberFormatException e) {
+            logger.error("Error parsing interest rate: {}", e.getMessage());
+            throw new IllegalArgumentException("Invalid interest rate format");
+        }
     }
 
     private BigDecimal getServiceFeeCap(LoanDuration loanDuration) {
-        return (loanDuration == LoanDuration.WEEKLY) ? BigDecimal.valueOf(50) : BigDecimal.valueOf(100);
+        try {
+            return (loanDuration == LoanDuration.WEEKLY) ? new BigDecimal(serviceCapWeekly) : new BigDecimal(serviceCapMonthly);
+        } catch (NumberFormatException e) {
+            logger.error("Error parsing service fee cap: {}", e.getMessage());
+            throw new IllegalArgumentException("Invalid service fee cap format");
+        }
     }
 
     private int getServiceFeeFrequency(LoanDuration loanDuration) {
         return (loanDuration == LoanDuration.WEEKLY) ? 2 : 3;
     }
 
-    private BigDecimal calculateInterestFee(BigDecimal principal, BigDecimal interestRate) {
+    public BigDecimal calculateInterestFee(BigDecimal principal, BigDecimal interestRate) {
         return principal.multiply(interestRate);
     }
 
@@ -65,9 +95,14 @@ public class FeeProjectionServiceImpl implements FeeProjectionService {
         return (installmentIndex + 1) % serviceFeeFrequency == 0;
     }
 
-    private BigDecimal calculateServiceFee(BigDecimal principal, BigDecimal serviceFeeCap) {
-        BigDecimal serviceFee = principal.multiply(BigDecimal.valueOf(0.005));
-        return (serviceFee.compareTo(serviceFeeCap) > 0) ? serviceFeeCap : serviceFee;
+    public BigDecimal calculateServiceFee(BigDecimal principal, BigDecimal serviceFeeCap) {
+        try {
+            BigDecimal serviceFee = principal.multiply(new BigDecimal(serviceFees));
+            return (serviceFee.compareTo(serviceFeeCap) > 0) ? serviceFeeCap : serviceFee;
+        } catch (NumberFormatException e) {
+            logger.error("Error parsing service fees: {}", e.getMessage());
+            throw new IllegalArgumentException("Invalid service fees format");
+        }
     }
 
 }

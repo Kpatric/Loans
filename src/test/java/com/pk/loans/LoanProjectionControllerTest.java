@@ -50,7 +50,7 @@ public class LoanProjectionControllerTest {
 
     @Test
     public void testCalculateFeeProjections() {
-        BigDecimal number = new BigDecimal("1000");
+        BigDecimal number = new BigDecimal("3000");
         // Mocking the behavior of the feeProjectionCalculator
         List<FeeProjection> expectedFeeProjections = List.of(
                 new FeeProjection(LocalDate.of(2023, 6, 1), BigDecimal.valueOf(30)),
@@ -61,16 +61,12 @@ public class LoanProjectionControllerTest {
         when(feeProjectionService.calculateFeeProjections(any(LoanRequest.class))).thenReturn(expectedFeeProjections);
 
         // Creating a sample LoanRequest
-        LoanRequest loanRequest = new LoanRequest(1,LocalDate.parse("2023-06-01"),number,LoanDuration.WEEKLY);
+        LoanRequest loanRequest = new LoanRequest(3,LocalDate.parse("2023-06-01"),number,LoanDuration.WEEKLY);
 
 
-        // Invoking the endpoint
-        ResponseEntity<String> responseEntity = feeProjectionController.calculateFeeProjections(loanRequest);
-        String actualFeeProjections = responseEntity.getBody();
-
-        // Asserting the result
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(expectedFeeProjections.toString(), actualFeeProjections);
+         //Invoking the endpoint
+        List<FeeProjection> actualFeeProjections = feeProjectionController.calculateFeeProjections(loanRequest);
+        assertEquals(expectedFeeProjections, actualFeeProjections);
 
     }
 
@@ -86,12 +82,11 @@ public class LoanProjectionControllerTest {
         LoanRequest loanRequest = new LoanRequest(1,LocalDate.parse("2023-06-01"),number,LoanDuration.WEEKLY);
 
         // Invoking the endpoint
-        ResponseEntity<String> responseEntity = installmentProjectionController.calculateInstallmentProjections(loanRequest);
-        String actualFeeProjections = responseEntity.getBody();
+        List<InstallmentProjection> actualProjections = installmentProjectionController.calculateInstallmentProjections(loanRequest);
+
 
         // Asserting the result
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(expectedInstallmentProjections.toString(), actualFeeProjections);
+        assertEquals(expectedInstallmentProjections, actualProjections);
 
     }
 }

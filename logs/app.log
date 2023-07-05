@@ -1,0 +1,181 @@
+2023-07-05 16:14:31,681 INFO [background-preinit] o.h.v.i.u.Version [Version.java:21] HV000001: Hibernate Validator 8.0.0.Final
+2023-07-05 16:14:31,748 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 21092 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:14:31,750 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:14:33,664 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-07-05 16:14:33,675 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:14:33,678 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-07-05 16:14:33,679 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-05 16:14:33,832 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-07-05 16:14:33,832 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 1953 ms
+2023-07-05 16:14:35,623 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:14:35,652 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-05 16:14:35,667 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 4.892 seconds (process running for 8.389)
+2023-07-05 16:14:58,321 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-05 16:14:58,321 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-07-05 16:14:58,323 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 1 ms
+2023-07-05 16:17:05,991 INFO [background-preinit] o.h.v.i.u.Version [Version.java:21] HV000001: Hibernate Validator 8.0.0.Final
+2023-07-05 16:17:06,063 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 15472 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:17:06,066 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:17:08,038 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-07-05 16:17:08,048 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:17:08,051 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-07-05 16:17:08,052 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-05 16:17:08,198 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-07-05 16:17:08,198 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 1994 ms
+2023-07-05 16:17:10,345 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:17:10,396 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-05 16:17:10,428 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.392 seconds (process running for 9.151)
+2023-07-05 16:17:19,884 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-05 16:17:19,885 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-07-05 16:17:19,887 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 2 ms
+2023-07-05 16:21:10,875 INFO [background-preinit] o.h.v.i.u.Version [Version.java:21] HV000001: Hibernate Validator 8.0.0.Final
+2023-07-05 16:21:10,956 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 6380 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:21:10,960 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:21:13,833 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-07-05 16:21:13,848 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:21:13,853 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-07-05 16:21:13,854 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-05 16:21:14,221 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-07-05 16:21:14,226 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 3136 ms
+2023-07-05 16:21:17,604 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:21:17,655 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-05 16:21:17,684 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 7.774 seconds (process running for 11.217)
+2023-07-05 16:21:22,292 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-05 16:21:22,293 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-07-05 16:21:22,296 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 2 ms
+2023-07-05 16:24:27,348 INFO [background-preinit] o.h.v.i.u.Version [Version.java:21] HV000001: Hibernate Validator 8.0.0.Final
+2023-07-05 16:24:29,598 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-07-05 16:24:29,607 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:24:29,616 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-07-05 16:24:29,616 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-05 16:24:29,795 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-07-05 16:24:29,796 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 2280 ms
+2023-07-05 16:24:31,746 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-05 16:24:31,798 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-05 16:24:38,422 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-05 16:24:38,423 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-07-05 16:24:38,425 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 1 ms
+2023-07-05 16:36:22,700 ERROR [http-nio-8080-exec-3] c.p.l.s.s.FeeProjectionServiceImpl [FeeProjectionServiceImpl.java:103] Error parsing service fees: For input string: "0.005"
+2023-07-05 16:38:05,636 ERROR [http-nio-8080-exec-2] c.p.l.s.s.FeeProjectionServiceImpl [FeeProjectionServiceImpl.java:103] Error parsing service fees: For input string: "0.005"
+2023-07-05 16:47:57,822 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 4944 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:47:57,828 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:48:03,927 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 7.151 seconds (process running for 10.514)
+2023-07-05 16:52:04,649 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 8440 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:52:04,660 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:52:10,757 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 7.314 seconds (process running for 9.95)
+2023-07-05 16:52:29,218 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 20960 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:52:29,226 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:52:34,261 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.254 seconds (process running for 11.635)
+2023-07-05 16:54:29,789 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 3928 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:54:29,798 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:54:35,293 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.657 seconds (process running for 11.338)
+2023-07-05 16:59:26,756 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 2636 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 16:59:26,768 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 16:59:32,317 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.729 seconds (process running for 10.117)
+2023-07-05 17:10:56,303 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 9292 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 17:10:56,309 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 17:11:01,087 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.265 seconds (process running for 10.374)
+2023-07-05 17:14:19,375 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 4952 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 17:14:19,381 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 17:14:25,241 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.894 seconds (process running for 9.85)
+2023-07-05 17:28:58,343 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 21196 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 17:28:58,350 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 17:29:05,829 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 9.063 seconds (process running for 13.745)
+2023-07-05 17:29:13,506 INFO [http-nio-8080-exec-2] c.p.l.u.CustomizedResponseExceptionHandler [CustomizedResponseExceptionHandler.java:24] Error while processing request: Non-terminating decimal expansion; no exact representable decimal result.
+2023-07-05 17:33:51,056 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 14728 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 17:33:51,065 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 17:33:55,741 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.604 seconds (process running for 8.962)
+2023-07-05 17:38:49,718 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 17604 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 17:38:49,735 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 17:38:53,924 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.115 seconds (process running for 9.199)
+2023-07-05 17:39:16,838 ERROR [http-nio-8080-exec-2] c.p.l.s.s.InstallmentProjectionServiceImpl [InstallmentProjectionServiceImpl.java:76] Error calculating installment amount: / by zero
+2023-07-05 17:39:16,842 INFO [http-nio-8080-exec-2] c.p.l.u.CustomizedResponseExceptionHandler [CustomizedResponseExceptionHandler.java:24] Error while processing request: Error calculating installment amount.
+2023-07-05 17:39:35,843 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 21332 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 17:39:35,851 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 17:39:40,985 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.138 seconds (process running for 10.363)
+2023-07-05 17:40:07,347 ERROR [http-nio-8080-exec-2] c.p.l.s.s.InstallmentProjectionServiceImpl [InstallmentProjectionServiceImpl.java:76] Error calculating installment amount: / by zero
+2023-07-05 17:40:07,373 INFO [http-nio-8080-exec-2] c.p.l.u.CustomizedResponseExceptionHandler [CustomizedResponseExceptionHandler.java:24] Error while processing request: Error calculating installment amount.
+2023-07-05 17:40:22,339 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 17112 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 17:40:22,350 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 17:40:27,612 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.309 seconds (process running for 10.529)
+2023-07-05 18:03:43,197 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 7316 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:03:43,205 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:03:48,576 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.598 seconds (process running for 10.368)
+2023-07-05 18:09:17,551 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 15476 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:09:17,559 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:09:24,028 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 7.696 seconds (process running for 13.46)
+2023-07-05 18:24:45,541 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 15608 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:24:45,550 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:24:53,773 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 9.347 seconds (process running for 12.518)
+2023-07-05 18:36:58,416 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 15348 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:36:58,423 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:37:03,236 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.888 seconds (process running for 10.191)
+2023-07-05 18:38:33,685 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 4132 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:38:33,691 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:38:38,054 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.364 seconds (process running for 8.913)
+2023-07-05 18:39:45,063 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 22128 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:39:45,073 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:39:53,499 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 9.579 seconds (process running for 14.778)
+2023-07-05 18:40:08,455 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 11628 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:40:08,464 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:40:13,390 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.931 seconds (process running for 9.204)
+2023-07-05 18:41:56,347 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 18032 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:41:56,354 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:42:03,380 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 8.2 seconds (process running for 12.281)
+2023-07-05 18:43:54,852 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 9564 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:43:54,860 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:43:59,819 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.987 seconds (process running for 10.29)
+2023-07-05 18:47:56,457 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 13804 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:47:56,474 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:48:01,505 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.117 seconds (process running for 11.393)
+2023-07-05 18:48:31,060 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 16652 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:48:31,068 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:48:35,927 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.799 seconds (process running for 9.147)
+2023-07-05 18:55:47,857 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 18788 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:55:47,865 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:55:53,093 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.25 seconds (process running for 9.159)
+2023-07-05 18:56:41,567 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 7520 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 18:56:41,577 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 18:56:48,647 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 8.309 seconds (process running for 13.391)
+2023-07-05 19:00:36,936 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 7796 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:00:36,945 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:00:45,006 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 10.015 seconds (process running for 14.889)
+2023-07-05 19:03:31,063 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 19320 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:03:31,071 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:03:36,512 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.491 seconds (process running for 9.563)
+2023-07-05 19:07:30,907 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 20808 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:07:30,916 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:07:35,713 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.618 seconds (process running for 14.187)
+2023-07-05 19:17:46,876 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 22240 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:17:46,888 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:17:53,481 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 7.849 seconds (process running for 11.517)
+2023-07-05 19:25:44,797 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 2224 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:25:44,806 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:25:50,034 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.284 seconds (process running for 9.211)
+2023-07-05 19:26:49,935 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 4392 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:26:49,944 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:26:55,436 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.404 seconds (process running for 9.413)
+2023-07-05 19:29:58,175 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 3600 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:29:58,185 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:30:04,748 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 7.632 seconds (process running for 11.569)
+2023-07-05 19:31:53,228 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 2636 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:31:53,237 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:31:58,649 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 6.497 seconds (process running for 10.799)
+2023-07-05 19:33:21,832 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 14468 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:33:21,839 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:33:30,526 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 9.756 seconds (process running for 14.017)
+2023-07-05 19:34:02,039 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 17348 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:34:02,048 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:34:06,879 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.884 seconds (process running for 9.309)
+2023-07-05 19:39:02,453 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 14640 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:39:02,471 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:39:13,901 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 12.919 seconds (process running for 17.63)
+2023-07-05 19:46:51,798 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 15768 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:46:51,805 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:46:59,150 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 8.503 seconds (process running for 12.804)
+2023-07-05 19:49:10,361 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 20964 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:49:10,368 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:49:14,855 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.719 seconds (process running for 8.531)
+2023-07-05 19:56:14,273 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:51] Starting LoansApplication using Java 19.0.2 with PID 3944 (D:\2023\Projects\Loans\target\classes started by UNICORN in D:\2023\Projects\Loans)
+2023-07-05 19:56:14,279 INFO [main] c.p.l.LoansApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2023-07-05 19:56:18,991 INFO [main] c.p.l.LoansApplication [StartupInfoLogger.java:57] Started LoansApplication in 5.587 seconds (process running for 8.599)

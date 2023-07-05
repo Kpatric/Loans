@@ -1,7 +1,9 @@
 package com.pk.loans.controller;
 
+import com.pk.loans.model.InstallmentProjection;
 import com.pk.loans.model.LoanRequest;
 import com.pk.loans.service.InstallmentProjectionService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,9 +28,9 @@ public class InstallmentProjectionController {
     }
 
     @PostMapping("/installment-projections")
-    public ResponseEntity<String> calculateInstallmentProjections(@RequestBody LoanRequest loanRequest) {
-        String installmentProjections = installmentProjectionService.calculateInstallmentProjections(loanRequest).toString();
-        return ResponseEntity.ok(installmentProjections);
+    public List<InstallmentProjection> calculateInstallmentProjections(@Valid @RequestBody LoanRequest loanRequest) {
+        return installmentProjectionService.calculateInstallmentProjections(loanRequest);
+
     }
 }
 

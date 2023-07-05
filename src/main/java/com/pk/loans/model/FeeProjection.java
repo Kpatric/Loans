@@ -20,9 +20,5 @@ public class FeeProjection {
     private LocalDate date;
     private BigDecimal amount;
 
-    @Override
-    public String toString() {
-        return date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + " => " + amount;
-    }
 }
 
